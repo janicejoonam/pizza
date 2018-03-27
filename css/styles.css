@@ -1,4 +1,12 @@
-h1, .jumbotron  {
+h1 {
   font-family: 'Fascinate Inline', cursive;
   font-size: 5vw;
+}
+
+.jumbotron  {
+  font-family: 'Fascinate Inline', cursive;
+  background-image: url("https://i.giphy.com/media/dOOKk7VHAvJja/giphy.webp");
+  background-repeat: repeat;
+  font-size: 5vw;
+  text-align: center;
 }
