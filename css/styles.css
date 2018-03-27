@@ -1,3 +1,7 @@
+body {
+  background-color: #f4b042;
+}
+
 h1 {
   font-family: 'Fascinate Inline', cursive;
   font-size: 5vw;
@@ -7,6 +11,14 @@ h1 {
   font-family: 'Fascinate Inline', cursive;
   background-image: url("https://i.giphy.com/media/dOOKk7VHAvJja/giphy.webp");
   background-repeat: repeat;
-  font-size: 5vw;
+  font-size: 6vw;
   text-align: center;
+}
+
+.cost {
+  display: none;
+}
+
+#submit {
+  background-color: #ba0505;
 }

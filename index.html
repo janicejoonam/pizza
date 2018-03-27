@@ -16,22 +16,27 @@
         <div class="size">
           <form id="orderpizza">
             <h1>Choose your size</h1>
-            <input type="checkbox" name="small" value="5.00"> Small 10"</br>
-            <input type="checkbox" name="medium" value="medium"> Medium 12"</br>
-            <input type="checkbox" name="large" value="8.00"> Large 14"</br>
-            <input type="checkbox" name="extralarge" value="12.00"> Extra Large 16"</br>
+            <input type="checkbox" name="small" value="5.00"> Small 10" (+$5.00)</br>
+            <input type="checkbox" name="medium" value="8.00"> Medium 12" (+$8.00)</br>
+            <input type="checkbox" name="large" value="12.00"> Large 14" (+$12.00)</br>
+            <input type="checkbox" name="extralarge" value="15.00"> Extra Large 16" (+$15.00)</br></br>
         </div>
         <div class="toppings">
           <h1>Choose your toppings</h1>
-          <input type="checkbox" name="cheese" value="0.50"> Cheese</br>
-          <input type="checkbox" name="pepperoni" value="0.50"> Pepperoni</br>
-          <input type="checkbox" name="italiansausage" value="0.50"> Italian Sausage</br>
-          <input type="checkbox" name="bacon" value="0.50"> Bacon</br>
-          <input type="checkbox" name="greenpeppers" value="0.30"> Green Peppers</br>
-          <input type="checkbox" name="olives" value="0.30"> Olives</br>
-          <input type="checkbox" name="redonions" value="0.30"> Red Onions</br>
+          <input type="checkbox" name="cheese" value="0.50"> Cheese (+$0.50)</br>
+          <input type="checkbox" name="pepperoni" value="0.50"> Pepperoni (+$0.50)</br>
+          <input type="checkbox" name="italiansausage" value="0.50"> Italian Sausage (+$0.50)</br>
+          <input type="checkbox" name="bacon" value="0.50"> Bacon (+$0.50)</br>
+          <input type="checkbox" name="greenpeppers" value="0.30"> Green Peppers (+$0.30)</br>
+          <input type="checkbox" name="olives" value="0.30"> Olives (+$0.30)</br>
+          <input type="checkbox" name="redonions" value="0.30"> Red Onions (+$0.30)</br></br>
 
+          <button type="submit" name="button" id="submit"><h1>Click here for your pizza!</h1></button></br></br>
+
+          <div class="cost">
           Final Cost of Pizza: $<span id="finalcost"></span>
+          </div>
+
           </form>
         </div>
       </div>
