@@ -1,6 +1,6 @@
 <h1>Project Name: Object Oriented JavaScript Project</h2>
 <h2>Order Pizza By: Janice Nam</h2>
-![pizza](img/pizza.jpg)
+![pizza](/img/pizza.jpg)
 <h2>Description</h2>
 This is Janice's first pizza generator!
 Create a website for a pizza company where a user can choose the size of the pizza, add one or more individual toppings (cheese, pepperoni, olives, etc.), and see the final cost.
