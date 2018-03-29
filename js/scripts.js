@@ -5,7 +5,7 @@ function Pizza(size, protein, veggies, total) {
   this.size = size
   this.protein = protein
   this.veggies = veggies
-  this.total = [];
+  this.total = total;
 }
 
 //4 Prototypes: size, protein, veggies, and total cost
@@ -57,20 +57,22 @@ Pizza.prototype.totalCost = function() {
 $(document).ready(function() {
   $("form#submit").submit(function(event) {
     event.preventDefault();
-    //instance
-      var newPizza = new Pizza (size, protein, veggies, total);
+    var size = [];
+    var protein = [];
+    var veggies = [];
+    var total = [];
       $("input[name='size']:checked").each(function() {
-        newPizza.addSize($(this).val());
+        size.push($(this).val());
       $("input[name='protein']:checked").each(function() {
-        newPizza.addProtein($(this).val());
+        protein.push($(this).val());
       $("input[name='veggies']:checked").each(function() {
-        newPizza.addVeggies($(this).val());
+        veggies.push($(this).val());
       });
 
-      $("#finalcost").text(newPizza.totalCost);
+      //instance
+      var eatPizza = new Pizza (size, protein, veggies, total);
+
       $("#cost").show();
+      $("#finalcost").text(eatPizza.totalCost);
       $("#orderpizza").hide();
-      });
     });
-  });
-});
