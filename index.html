@@ -12,6 +12,7 @@
     <div class="jumbotron">
       <p>WHO WANTS SOME <img src="https://i.imgur.com/tmIsjzC.gif"></p>
     </div>
+    <!--Pizza size-->
     <div class="container">
       <form id="orderpizza">
         <div class="size">
@@ -21,6 +22,7 @@
           <input type="checkbox" name="size" value="12.00"> Large 14" (+$12.00)</br>
           <input type="checkbox" name="size" value="15.00"> Extra Large 16" (+$15.00)</br></br>
         </div>
+        <!--Pizza toppings-->
         <div class="toppingsprotein">
           <h1>Choose your toppings</h1>
           <input type="checkbox" name="protein" value="0.50"> Cheese (+$0.50)</br>
@@ -28,17 +30,25 @@
           <input type="checkbox" name="protein" value="0.50"> Italian Sausage (+$0.50)</br>
           <input type="checkbox" name="protein" value="0.50"> Bacon (+$0.50)</br>
         </div>
+        <!--Pizza veggies-->
         <div class="toppingsveggies">
           <input type="checkbox" name="veggies" value="0.30"> Green Peppers (+$0.30)</br>
           <input type="checkbox" name="veggies" value="0.30"> Olives (+$0.30)</br>
           <input type="checkbox" name="veggies" value="0.30"> Spinach (+$0.30)</br>
           <input type="checkbox" name="veggies" value="0.30"> Red Onions (+$0.30)</br></br>
         </div>
+        <!--Submit Button-->
         <button type="submit" name="button" id="submit"><h1>Click here for your pizza!</h1>
         </button></br></br>
       </form>
-      <div id="cost">
-      Final Cost of Pizza: $<span id="finalcost"></span>
+      <!--Pizza Order Summary-->
+      <div id="summary">
+      <h2>Order Summary</h2>
+      <ul id="order">
+      </ul>
+      <p>Size: <span id="order-size"></span></p></br>
+      <p>Toppings: <span id="order-toppings"></span></p></br>
+      <p>Final Cost of Pizza: $<span id="finalcost"></span></p>
       </div>
     </div>
   </body>

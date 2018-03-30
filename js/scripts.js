@@ -1,52 +1,39 @@
 //Business Logic
 
 //Constructor is Pizza
-function Pizza(size, protein, veggies, total) {
-  this.size = size
-  this.protein = protein
-  this.veggies = veggies
-  this.total = total;
+function Pizza(size, protein, veggies) {
+  this.size = size;
+  this.protein = protein;
+  this.veggies = veggies;
+
 }
 
-//4 Prototypes: size, protein, veggies, and total cost
-Pizza.prototype.chooseSize = function() {
+//Prototype is cost
+Pizza.prototype.cost = function() {
   var cost = 0;
   if (this.size === "small") {
-    cost = 5;
+    cost += 5;
   } else if (this.size === "medium") {
-    cost = 8;
+    cost += 8;
   } else if (this.size === "large") {
-    cost = 12;
+    cost += 12;
   } else if (this.size === "extralarge") {
-    cost = 15;
+    cost += 15;
   }
 
-Pizza.prototype.chooseProtein = function(protein) {
-
-    this.protein.forEach(function() {
+  if (this.protein === "protein") {
+    // this.protein.forEach(function() {
       cost += 0.50;
-    });
+    }
+  }
 
-  this.protein.forEach(function() {
-    cost += 0.50;
-  });
-}
+  if (this.veggies === "veggies") {
+    // this.veggies.forEach(function() {
+      cost += 0.30;
+    }
 
-Pizza.prototype.chooseVeggies = function(veggies) {
-  this.veggies.forEach(function() {
-    cost += 0.30;
-  });
-}
-
-Pizza.prototype.totalCost = function() {
-  var totalCost = 0;
-  this.total.forEach(function() {
-    totalCost += Pizza.cost;
-  });
-  this.totalCost = totalCost;
-  return newPizza.totalCost;
-}
-
+    return cost;
+};
 
 
 
@@ -55,12 +42,11 @@ Pizza.prototype.totalCost = function() {
 
 //User Interface Logic
 $(document).ready(function() {
-  $("form#submit").submit(function(event) {
+  $("form#orderpizza").submit(function(event) {
     event.preventDefault();
     var size = [];
     var protein = [];
     var veggies = [];
-    var total = [];
       $("input[name='size']:checked").each(function() {
         size.push($(this).val());
       $("input[name='protein']:checked").each(function() {
@@ -69,10 +55,23 @@ $(document).ready(function() {
         veggies.push($(this).val());
       });
 
-      //instance
-      var eatPizza = new Pizza (size, protein, veggies, total);
+      //Instance
+      var eatPizza = new Pizza (size, protein, veggies);
 
-      $("#cost").show();
-      $("#finalcost").text(eatPizza.totalCost);
+      $("input:checkbox[name=size]:checked").each(function() {
+        var pizzaOrder = $(this).val();
+        $("ul#order").append("<li><button type='submit'><span id='order-size'>" + eatPizza.size + eatPizza.protein + eatPizza.veggies + "</button></span></li>");
+      });
       $("#orderpizza").hide();
+
+
+
+
+      $("#order-size").text(eatPizza.size);
+      $("#order-toppings").text(eatPizza.protein);
+      $("#order-toppings").text(eatPizza.veggies);
+      $("#finalcost").text(eatPizza.cost);
+      $("#summary").show();
     });
+  });
+});
