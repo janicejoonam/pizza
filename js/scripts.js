@@ -5,7 +5,6 @@ function Pizza(size, protein, veggies) {
   this.size = size;
   this.protein = protein;
   this.veggies = veggies;
-
 }
 
 //Prototype is cost
