@@ -18,22 +18,32 @@
         <div id="page1">
           <div class="size">
             <h1>Choose your size</h1>
-            <input type="checkbox" name="size" value="5.00"> Small 10" (+$5.00)</br>
-            <input type="checkbox" name="size" value="8.00"> Medium 12" (+$8.00)</br>
-            <input type="checkbox" name="size" value="12.00"> Large 14" (+$12.00)</br>
-            <input type="checkbox" name="size" value="15.00"> Extra Large 16" (+$15.00)</br></br>
+            <select id="pizza-size">
+              <option>
+                Small 10-inch
+              </option>
+              <option>
+                Medium 12-inch
+              </option>
+              <option>
+                Large 14-inch
+              </option>
+              <option>
+                Extra-Large 16-inch
+              </option>
+            </select>
           </div>
         <!--Pizza toppings-->
         <div class="toppings">
           <h1>Choose your toppings</h1>
-          <input type="checkbox" name="toppings" value="0.50"> Cheese (+$0.50)</br>
-          <input type="checkbox" name="toppings" value="0.50"> Pepperoni (+$0.50)</br>
-          <input type="checkbox" name="toppings" value="0.50"> Italian Sausage (+$0.50)</br>
-          <input type="checkbox" name="toppings" value="0.50"> Bacon (+$0.50)</br>
-          <input type="checkbox" name="toppings" value="0.30"> Green Peppers (+$0.30)</br>
-          <input type="checkbox" name="toppings" value="0.30"> Olives (+$0.30)</br>
-          <input type="checkbox" name="toppings" value="0.30"> Spinach (+$0.30)</br>
-          <input type="checkbox" name="toppings" value="0.30"> Red Onions (+$0.30)</br></br>
+          <input type="checkbox" name="toppings" value="Cheese"> Cheese (+$1.00)</br>
+          <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni (+$1.00)</br>
+          <input type="checkbox" name="toppings" value="Italian Sausage"> Italian Sausage (+$1.00)</br>
+          <input type="checkbox" name="toppings" value="Bacon"> Bacon (+$1.00)</br>
+          <input type="checkbox" name="toppings" value="Green Peppers"> Green Peppers (+$1.00)</br>
+          <input type="checkbox" name="toppings" value="Olives"> Olives (+$1.00)</br>
+          <input type="checkbox" name="toppings" value="Spinach"> Spinach (+$1.00)</br>
+          <input type="checkbox" name="toppings" value="Red Onions"> Red Onions (+$1.00)</br></br>
         </div>
         <!--Submit Button-->
         <button type="submit" name="button" id="submit1"><h1>Click here for your pizza!</h1>
@@ -44,13 +54,10 @@
       <!--Pizza Order Summary-->
       <div id="page2">
       <h2>Order Summary</h2>
+      <p><span id="order"></span></p>
       <p><span id="size"></span></p>
       <p><span id="toppings"></span></p>
       <p><span id="price"></span></p>
-      <button id="final-order">Submit final order</button>
-      </div>
-      <div id="summary">
-
       </div>
   </body>
 </html>
